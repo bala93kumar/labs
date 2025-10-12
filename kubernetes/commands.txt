@@ -1,0 +1,30 @@
+
+
+docker pull apache/spark:latest
+
+
+kubectl cluster-info
+
+
+>kubectl create namespace spark
+
+
+
+kubectl  apply -f first.yaml
+
+kubectl get pods -n spark
+
+kubectl delete pod pod_bane -n workspacename
+
+
+
+
+
+kind get clusters
+
+
+balak@Bala93kumar:~$ kind create cluster --name demo-cluster
+
+
+kubectl get pods --all-namespaces 
+(also get system pods)
