@@ -28,3 +28,8 @@ balak@Bala93kumar:~$ kind create cluster --name demo-cluster
 
 kubectl get pods --all-namespaces 
 (also get system pods)
+
+
+#help commands 
+
+kubeclt help

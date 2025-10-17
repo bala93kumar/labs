@@ -1,0 +1,43 @@
+sudo apt-get update
+My local user  L testuser
+pswd  test123
+
+####################3
+
+#login to the local ubuntu server vm from host windows 
+
+ssh -p 2222 testuser@127.0.0.1
+
+
+
+############################################
+
+# FOLLOW ALL THE BELOW COMMADN TO INSTALL DOCKER ON UBUNTU SERVER
+root@dockerserver:~# history
+    1  ls
+    2  ls -l /etc/apt/keyrings/
+    3  ls
+    4  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    5  ls -l /etc/apt/keyrings/
+    6  ls -ltra /etc/apt/keyrings/
+    7  sudo chmod a+r /etc/apt/keyrings/docker.asc
+    8  ls -ltra /etc/apt/keyrings/
+    9  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   10  cat /etc/apt/keyrings/docker.asc
+   11  ls -l /etc/apt/sources.list.d/
+   12  pwd
+   13  ls
+   14  cd /etc/apt/sources
+   15  sudo apt-get update
+   16  apt-cache madison docker-ce | awk '{print $3}'
+   17  apt-cache madison docker-ce
+   18  apt-cache madison docker-ce | awk '{print $1}'
+   19  apt-cache madison docker-ce | awk '{print $2}'
+   20  apt-cache madison docker-ce | awk '{print $3}'
+   21  apt-cache madison docker-ce | awk '{print $5}'
+   22  apt-cache madison docker-ce | awk '{print $}'
+   23  apt-cache madison docker-ce | awk '{print $6}'
+   24  apt-cache madison docker-ce | awk '{print $3}'
+   25  docker --version
+   26  history
