@@ -41,3 +41,17 @@ root@dockerserver:~# history
    24  apt-cache madison docker-ce | awk '{print $3}'
    25  docker --version
    26  history
+
+#############################
+
+# we can remove all the above or docker installations using the below command 
+
+rm -r /etc/apt/sources.list.d/docker.list
+rm /etc/apt/keyrings/docker.asc
+rm -r /var/lib/docker
+sudo apt-get remove docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+### to reinstall docker we need to follow all the above steps again
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+##########################################
