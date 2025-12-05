@@ -98,3 +98,57 @@ docker container start bold_pasteur
 docker container restart bold_pasteur
 
 # We are now going to see other options of docker run command with parameters
+
+
+root@dockerserver:~# docker container run -d -t -i --name nginx-demo --hostname nginxwebserver nginx
+a469ae7551543959a49c0412e3744bf604e2940e1ab9c9011427490d3593791d
+
+#login to the container
+#below is not working
+root@dockerserver:~# docker container exec -it nginx-demo /bin/bash
+#this is working command 
+root@dockerserver:~# docker container exec -t -i  nginx-demo bash
+
+
+#get ip within the container
+
+root@nginxwebserver:~# cat /etc/hosts
+127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::  ip6-localnet
+ff00::  ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+172.17.0.2      nginxwebserver
+
+#to get ip a command working within the container use the below command 
+
+root@nginxwebserver:~# ping google.com
+bash: ping: command not found
+root@nginxwebserver:~# apt update
+Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [57.7 kB]
+Fetched 9963 kB in 4s (2775 kB/s)
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+root@nginxwebserver:~#
+root@nginxwebserver:~# apt install -y iputils-ping iproute2
+
+#now ip a and ping command will work
+
+
+root@dockerserver:~# docker container exec -t -i  nginx-demo ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0@if4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+    link/ether d6:fb:10:9a:0f:d2 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.17.0.2/16 brd 172.17.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+
