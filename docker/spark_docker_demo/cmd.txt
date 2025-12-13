@@ -1,0 +1,859 @@
+------
+ > [internal] load metadata for docker.io/bitnami/spark:3.5.0:
+------
+Dockerfile:1
+--------------------
+   1 | >>> FROM bitnami/spark:3.5.0
+   2 |
+   3 |     WORKDIR /app
+--------------------
+ERROR: failed to build: failed to solve: bitnami/spark:3.5.0: failed to resolve source metadata for docker.io/bitnami/spark:3.5.0: docker.io/bitnami/spark:3.5.0: not found
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/yj5j94xeawoqfhuxz0l45d6c2
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker build .
+[+] Building 46.8s (9/9) FINISHED                                              docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 215B                                                           0.0s 
+ => [internal] load metadata for docker.io/apache/spark:latest                                 4.2s 
+ => [auth] apache/spark:pull token for registry-1.docker.io                                    0.0s
+ => [internal] load .dockerignore                                                              0.1s
+ => => transferring context: 2B                                                                0.0s 
+ => [1/3] FROM docker.io/apache/spark:latest@sha256:fb5c5e61e7bb1be94b7f3a31afe1f73c5b4d20b6  41.8s 
+ => => resolve docker.io/apache/spark:latest@sha256:fb5c5e61e7bb1be94b7f3a31afe1f73c5b4d20b60  0.1s 
+ => => sha256:063efdd62299d0978bd2f91530b8131d6f125df09fa08cfe9f2dac1b20608da 2.14kB / 2.14kB  1.1s 
+ => => sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0B / 32B       42.1s
+ => => sha256:fc30167e61ec5c5b24403b701b019ed1c7d03c42a4d3d1da66cb0a8f87 113.74MB / 113.74MB  12.7s
+ => => sha256:15e4d5608b5d0f1473f670c627420caef94f8c549b943262ab5a6301b0b9160 2.28kB / 2.28kB  1.5s
+ => => sha256:914b8e08b120c23449ae881c763d6b68d91b71a3fed6a7e9aabf88c6830d53a 1.42kB / 1.42kB  1.0s 
+ => => sha256:d6120984b6f35ac69dd1cd2a895fa2a353eef3edb8dad7539e1b796fe8a97757 160B / 160B     1.0s 
+ => => sha256:6ddc895a875f5a783bc34c3de5a287ad48aa3b7a5438c5b2bffcb09053 441.64MB / 441.64MB  36.3s 
+ => => sha256:7b60e486d958e30feaa19f7611bf1eabbc9b58f02a923ba54d78244b20 157.81MB / 157.81MB  16.6s 
+ => => sha256:a6db01968dec5422143ca20241b7e6c8ad46caee949abf4078c57f6b57a3e 20.70MB / 20.70MB  4.0s 
+ => => sha256:60d98d907669dc22e547405da3e409eb14496606f4ac90692c5f2ef5081c4 29.54MB / 29.54MB  4.4s 
+ => => extracting sha256:60d98d907669dc22e547405da3e409eb14496606f4ac90692c5f2ef5081c4b1e      0.8s 
+ => => sha256:d0b3d130c22a77ba363c10e1e57ac8911f7bac1b849bb950906876ee39353 21.69MB / 21.69MB  3.5s 
+ => => extracting sha256:a6db01968dec5422143ca20241b7e6c8ad46caee949abf4078c57f6b57a3ea9b      0.7s 
+ => => extracting sha256:7b60e486d958e30feaa19f7611bf1eabbc9b58f02a923ba54d78244b20398c1a      1.5s 
+ => => extracting sha256:d6120984b6f35ac69dd1cd2a895fa2a353eef3edb8dad7539e1b796fe8a97757      0.0s 
+ => => extracting sha256:15e4d5608b5d0f1473f670c627420caef94f8c549b943262ab5a6301b0b9160c      0.0s 
+ => => extracting sha256:914b8e08b120c23449ae881c763d6b68d91b71a3fed6a7e9aabf88c6830d53ac      0.0s 
+ => => extracting sha256:d0b3d130c22a77ba363c10e1e57ac8911f7bac1b849bb950906876ee393530c9      0.3s 
+ => => extracting sha256:6ddc895a875f5a783bc34c3de5a287ad48aa3b7a5438c5b2bffcb09053e5785d      1.9s 
+ => => extracting sha256:063efdd62299d0978bd2f91530b8131d6f125df09fa08cfe9f2dac1b20608da0      0.0s 
+ => => extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1      0.0s 
+ => => extracting sha256:fc30167e61ec5c5b24403b701b019ed1c7d03c42a4d3d1da66cb0a8f872bd760      1.6s 
+ => [internal] load build context                                                              0.1s 
+ => => transferring context: 655B                                                              0.0s 
+ => [2/3] WORKDIR /app                                                                         0.4s 
+ => [3/3] COPY app/ /app/                                                                      0.0s 
+ => exporting to image                                                                         0.1s 
+ => => exporting layers                                                                        0.1s 
+ => => exporting manifest sha256:f160339149050d958fb9c7950634351c39688bb3cc513f3cf998ec23ccc1  0.0s 
+ => => exporting config sha256:57beef18ef6c5bcbba040e5de78446629df19aa6bd6650dbb2023ef9b6f973  0.0s 
+ => => exporting attestation manifest sha256:76ae074a633508d8fc609ecb9da030a46c61a374d667c638  0.0s 
+ => => exporting manifest list sha256:ad1cd8151107a4e8e92ec7a627ba0c981813bcfdaab1a92fa04038b  0.0s 
+ => => naming to moby-dangling@sha256:ad1cd8151107a4e8e92ec7a627ba0c981813bcfdaab1a92fa04038b  0.0s 
+ => => unpacking to moby-dangling@sha256:ad1cd8151107a4e8e92ec7a627ba0c981813bcfdaab1a92fa040  0.0s 
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/y06qymc2j6g3j682tdubxma2v
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker run sha256:ad1cd8151107a4e8e92ec7a627ba0c981813bcfdaab1a92fa04038b9361a91f8
+/opt/entrypoint.sh: line 128: exec: spark-submit: not found
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build                   
+time="2025-12-13T16:09:27+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 1.7s (3/3) FINISHED
+ => [internal] load local bake definitions                                                     0.0s
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 224B                                                           0.0s 
+ => ERROR [internal] load metadata for ghcr.io/bitnami/spark:latest                            1.1s 
+------
+ > [internal] load metadata for ghcr.io/bitnami/spark:latest:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM ghcr.io/bitnami/spark:latest
+
+   2 |
+
+   3 |     WORKDIR /app
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: unexpected status from GET request to https://ghcr.io/token?scope=repository%3Abitnami%2Fspark%3Apull&service=ghcr.io: 403 Forbidden
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/fwxviunvvkhwbqrkk280lslne      
+
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build
+time="2025-12-13T16:10:37+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 2.6s (4/4) FINISHED
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 217B                                                           0.0s 
+ => ERROR [internal] load metadata for docker.io/apache/spark-py:3.5.0                         2.2s 
+ => [auth] apache/spark-py:pull token for registry-1.docker.io                                 0.0s
+------
+ > [internal] load metadata for docker.io/apache/spark-py:3.5.0:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM apache/spark-py:3.5.0
+
+   2 |
+
+   3 |     WORKDIR /app
+
+--------------------
+
+failed to solve: apache/spark-py:3.5.0: failed to resolve source metadata for docker.io/apache/spark-py:3.5.0: docker.io/apache/spark-py:3.5.0: not found
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/s3bwrf1vu9j95gtytymmf7dmf      
+
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build
+time="2025-12-13T16:15:12+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 2.6s (11/11) FINISHED
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 215B                                                           0.0s 
+ => [internal] load metadata for docker.io/apache/spark:latest                                 1.9s 
+ => [auth] apache/spark:pull token for registry-1.docker.io                                    0.0s 
+ => [internal] load .dockerignore                                                              0.0s
+ => => transferring context: 2B                                                                0.0s 
+ => [1/3] FROM docker.io/apache/spark:latest@sha256:fb5c5e61e7bb1be94b7f3a31afe1f73c5b4d20b60  0.0s 
+ => => resolve docker.io/apache/spark:latest@sha256:fb5c5e61e7bb1be94b7f3a31afe1f73c5b4d20b60  0.0s 
+ => [internal] load build context                                                              0.0s 
+ => => transferring context: 99B                                                               0.0s
+ => CACHED [2/3] WORKDIR /app                                                                  0.0s 
+ => CACHED [3/3] COPY app/ /app/                                                               0.0s 
+ => exporting to image                                                                         0.2s 
+ => => exporting layers                                                                        0.0s 
+ => => exporting manifest sha256:b3a38458b4ac31a1f9872206e375634f6e6d6387260fda970515138a852a  0.0s 
+ => => exporting config sha256:9f23be96434b6c6393dd49c6b613e8eb4dafbbe2697f91f8ac4f001798e7b4  0.0s 
+ => => exporting attestation manifest sha256:0872277b2dcbdd09b700488b480ebf740450a1c6b4c76f99  0.0s 
+ => => exporting manifest list sha256:eb8994a9790142e2e25993cc38c4ededc86a5ca66775f14a0b462a3  0.0s 
+ => => naming to docker.io/library/spark_docker_demo-spark:latest                              0.0s 
+ => => unpacking to docker.io/library/spark_docker_demo-spark:latest                           0.0s 
+ => resolving provenance for metadata file                                                     0.0s 
+[+] Building 1/1
+ ✔ spark_docker_demo-spark  Built                                                              0.0s 
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build                   
+time="2025-12-13T16:16:24+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 1.6s (10/10) FINISHED
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 215B                                                           0.0s 
+ => [internal] load metadata for docker.io/apache/spark:latest                                 0.9s 
+ => [internal] load .dockerignore                                                              0.0s
+ => => transferring context: 2B                                                                0.0s 
+ => [1/3] FROM docker.io/apache/spark:latest@sha256:fb5c5e61e7bb1be94b7f3a31afe1f73c5b4d20b60  0.0s 
+ => => resolve docker.io/apache/spark:latest@sha256:fb5c5e61e7bb1be94b7f3a31afe1f73c5b4d20b60  0.0s 
+ => [internal] load build context                                                              0.0s 
+ => => transferring context: 99B                                                               0.0s 
+ => CACHED [2/3] WORKDIR /app                                                                  0.0s
+ => CACHED [3/3] COPY app/ /app/                                                               0.0s 
+ => exporting to image                                                                         0.1s 
+ => => exporting layers                                                                        0.0s 
+ => => exporting manifest sha256:b3a38458b4ac31a1f9872206e375634f6e6d6387260fda970515138a852a  0.0s 
+ => => exporting config sha256:9f23be96434b6c6393dd49c6b613e8eb4dafbbe2697f91f8ac4f001798e7b4  0.0s 
+ => => exporting attestation manifest sha256:2f4c4fceae33cd1734797d40e35d938076a7659d63b7bd68  0.0s 
+ => => exporting manifest list sha256:ef037fe097b7a37b620be96568be54fd3122d50356793a26ef83221  0.0s 
+ => => naming to docker.io/library/spark_docker_demo-spark:latest                              0.0s 
+ => => unpacking to docker.io/library/spark_docker_demo-spark:latest                           0.1s 
+ => resolving provenance for metadata file                                                     0.0s 
+[+] Building 1/1
+ ✔ spark_docker_demo-spark  Built                                                              0.0s 
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker run -it apache/spark:latest spark-submit --version
+Unable to find image 'apache/spark:latest' locally
+latest: Pulling from apache/spark
+Digest: sha256:fb5c5e61e7bb1be94b7f3a31afe1f73c5b4d20b6008f4ffa7278fc085da08a9e
+Status: Downloaded newer image for apache/spark:latest
+/opt/entrypoint.sh: line 128: exec: spark-submit: not found
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build                   
+time="2025-12-13T16:19:54+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 2.9s (4/4) FINISHED
+ => [internal] load local bake definitions                                                     0.0s
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 217B                                                           0.0s 
+ => ERROR [internal] load metadata for docker.io/apache/spark-py:3.5.0                         1.8s 
+ => [auth] apache/spark-py:pull token for registry-1.docker.io                                 0.0s 
+------
+ > [internal] load metadata for docker.io/apache/spark-py:3.5.0:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM apache/spark-py:3.5.0
+
+   2 |
+
+   3 |     WORKDIR /app
+
+--------------------
+
+failed to solve: apache/spark-py:3.5.0: failed to resolve source metadata for docker.io/apache/spark-py:3.5.0: docker.io/apache/spark-py:3.5.0: not found
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/rymsllaqse7yq0q6q4jegm059      
+
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build
+time="2025-12-13T16:22:03+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 55.4s (11/11) FINISHED
+ => [internal] load local bake definitions                                                     0.0s
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.1s
+ => => transferring dockerfile: 207B                                                           0.1s 
+ => [internal] load metadata for docker.io/library/spark:scala                                 4.4s 
+ => [auth] library/spark:pull token for registry-1.docker.io                                   0.0s
+ => [internal] load .dockerignore                                                              0.0s
+ => => transferring context: 2B                                                                0.0s 
+ => [1/3] FROM docker.io/library/spark:scala@sha256:5a13202a9dc7645c14cbb85a812d967d63a755f4  47.9s 
+ => => resolve docker.io/library/spark:scala@sha256:5a13202a9dc7645c14cbb85a812d967d63a755f4f  0.1s 
+ => => sha256:58772a9f9b581314a98c4bcddc341f9e84af7c6d4d11bb0becef4154628ac4d 2.13kB / 2.13kB  0.7s 
+ => => sha256:dca49e9b1fdac5fe5b1afc5675e6951bf6bddeb62c6350a98b8c877d08 441.64MB / 441.64MB  41.8s
+ => => sha256:d5ac64952b7233b658c040139bf49d1ed0f48d0d96f102df9dfe4a63b1086 21.85MB / 21.85MB  4.6s 
+ => => sha256:892f13c311d1d1a818636efd4a177b56dd17fc664225df506aa7060fea257e3 1.42kB / 1.42kB  1.4s 
+ => => sha256:2581bc3ff3b6d9f257d5b3f64a3d86de4713b0ffefbb3189693db6e3785a9e7 2.28kB / 2.28kB  0.7s 
+ => => sha256:837687f10a1f82571090fcd9ad0528fcc7b5f43242cc1c6b76f6afefdff0a2d6 158B / 158B     0.8s 
+ => => sha256:f28a3134bb3a9ba57065c495a66645b15abc9c0d5239598e0efa785944 144.85MB / 144.85MB  20.3s 
+ => => sha256:e106dd8ed6ad2e6cce7b8a0e8ec5a228fd591f46f34a5c649b68ec66090c4 20.70MB / 20.70MB  6.5s 
+ => => sha256:7e49dc6156b0b532730614d83a65ae5e7ce61e966b0498703d333b4d03505 29.54MB / 29.54MB  5.8s 
+ => => extracting sha256:7e49dc6156b0b532730614d83a65ae5e7ce61e966b0498703d333b4d03505e4f      2.0s 
+ => => extracting sha256:e106dd8ed6ad2e6cce7b8a0e8ec5a228fd591f46f34a5c649b68ec66090c4e67      1.2s 
+ => => extracting sha256:f28a3134bb3a9ba57065c495a66645b15abc9c0d5239598e0efa785944e1d877      3.1s 
+ => => extracting sha256:837687f10a1f82571090fcd9ad0528fcc7b5f43242cc1c6b76f6afefdff0a2d6      0.0s 
+ => => extracting sha256:2581bc3ff3b6d9f257d5b3f64a3d86de4713b0ffefbb3189693db6e3785a9e79      0.0s 
+ => => extracting sha256:892f13c311d1d1a818636efd4a177b56dd17fc664225df506aa7060fea257e3c      0.0s 
+ => => extracting sha256:d5ac64952b7233b658c040139bf49d1ed0f48d0d96f102df9dfe4a63b108675b      0.6s 
+ => => extracting sha256:dca49e9b1fdac5fe5b1afc5675e6951bf6bddeb62c6350a98b8c877d08bc874a      5.5s 
+ => => extracting sha256:58772a9f9b581314a98c4bcddc341f9e84af7c6d4d11bb0becef4154628ac4d4      0.0s 
+ => => extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1      0.0s 
+ => [internal] load build context                                                              0.1s 
+ => => transferring context: 99B                                                               0.0s 
+ => [2/3] WORKDIR /app                                                                         0.7s 
+ => [3/3] COPY app/ /app/                                                                      0.1s 
+ => exporting to image                                                                         0.7s 
+ => => exporting layers                                                                        0.3s 
+ => => exporting manifest sha256:170bb30b5f4ea213924473c484da05f3e3bd008d0b4209405bbef56020c7  0.0s 
+ => => exporting config sha256:acf06390520b1b57ebfe9f10f3a7ee16773532decf9d93cf6a744e57e087c1  0.0s 
+ => => exporting attestation manifest sha256:64b95a1ebd2a97d7d7c4dca8077e52d2788ca2acd6d7ef65  0.1s 
+ => => exporting manifest list sha256:5eff19b6724f31c8d29f9f5f57c6d6273b288670173a82f4e516296  0.0s 
+ => => naming to docker.io/library/spark_docker_demo-spark:latest                              0.0s 
+ => => unpacking to docker.io/library/spark_docker_demo-spark:latest                           0.1s 
+ => resolving provenance for metadata file                                                     0.0s 
+[+] Building 1/1
+ ✔ spark_docker_demo-spark  Built                                                              0.0s 
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker run -it spark_docker_demo-spark bash
+spark@23555458aa1a:/app$ which spark-submit
+spark@23555458aa1a:/app$ which spark-shell
+spark@23555458aa1a:/app$ find / -name spark-submit
+find: ‘/proc/tty/driver’: Permission denied
+find: ‘/root’: Permission denied
+/opt/spark/bin/spark-submit
+find: ‘/var/cache/ldconfig’: Permission denied
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+spark@23555458aa1a:/app$ env | grep SPARK
+SPARK_TGZ_ASC_URL=https://www.apache.org/dyn/closer.lua/spark/spark-4.0.1/spark-4.0.1-bin-hadoop3.tgz.asc?action=download
+SPARK_TGZ_URL=https://www.apache.org/dyn/closer.lua/spark/spark-4.0.1/spark-4.0.1-bin-hadoop3.tgz?action=download
+SPARK_HOME=/opt/spark
+spark@23555458aa1a:/app$ env
+SPARK_TGZ_ASC_URL=https://www.apache.org/dyn/closer.lua/spark/spark-4.0.1/spark-4.0.1-bin-hadoop3.tgz.asc?action=download
+HOSTNAME=23555458aa1a
+LANGUAGE=en_US:en
+JAVA_HOME=/opt/java/openjdk
+SPARK_TGZ_URL=https://www.apache.org/dyn/closer.lua/spark/spark-4.0.1/spark-4.0.1-bin-hadoop3.tgz?action=download
+PWD=/app
+HOME=/nonexistent
+LANG=en_US.UTF-8
+GPG_KEY=F28C9C925C188C35E345614DEDA00CE834F0FC5C
+TERM=xterm
+SHLVL=1
+SPARK_HOME=/opt/spark
+LC_ALL=en_US.UTF-8
+PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+JAVA_VERSION=jdk-17.0.17+10
+_=/usr/bin/env
+spark@23555458aa1a:/app$ $SPARK_HOME/bin/spark-submit --version
+WARNING: Using incubator modules: jdk.incubator.vector
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 4.0.1
+      /_/
+
+Using Scala version 2.13.16, OpenJDK 64-Bit Server VM, 17.0.17
+Branch HEAD
+Compiled by user runner on 2025-09-02T03:10:51Z
+Revision 29434ea766b0fc3c3bf6eaadb43a8f931133649e
+Url https://github.com/apache/spark
+Type --help for more information.
+spark@23555458aa1a:/app$ $SPARK_HOME/bin/spark-submit /app/spark_app.py
+WARNING: Using incubator modules: jdk.incubator.vector
+Exception in thread "main" java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+        at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+        at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+        at org.apache.spark.deploy.PythonRunner$.main(PythonRunner.scala:121)
+        at org.apache.spark.deploy.PythonRunner.main(PythonRunner.scala)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+        at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+        at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:1027)
+        at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:204)
+        at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:227)
+        at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:96)
+        at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1132)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1141)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.io.IOException: error=2, No such file or directory
+        at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+        at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:314)
+        at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:244)
+        at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1110)
+        ... 15 more
+25/12/13 12:28:28 INFO ShutdownHookManager: Shutdown hook called
+25/12/13 12:28:28 INFO ShutdownHookManager: Deleting directory /tmp/spark-3cd322e3-a383-40d1-b3dc-1ea456e13e30
+spark@23555458aa1a:/app$ pwd
+/app
+spark@23555458aa1a:/app$ ls
+sample_data.csv  spark_app.py
+spark@23555458aa1a:/app$ ^C
+spark@23555458aa1a:/app$ ^C
+spark@23555458aa1a:/app$ ^C
+spark@23555458aa1a:/app$ ^C
+spark@23555458aa1a:/app$ exit
+exit
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build                   
+time="2025-12-13T16:34:10+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 2.5s (10/11)
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 421B                                                           0.0s 
+ => [internal] load metadata for docker.io/library/spark:scala                                 1.8s 
+ => [auth] library/spark:pull token for registry-1.docker.io                                   0.0s
+ => [internal] load .dockerignore                                                              0.0s
+ => => transferring context: 2B                                                                0.0s 
+ => [1/5] FROM docker.io/library/spark:scala@sha256:5a13202a9dc7645c14cbb85a812d967d63a755f4f  0.0s 
+ => => resolve docker.io/library/spark:scala@sha256:5a13202a9dc7645c14cbb85a812d967d63a755f4f  0.0s 
+ => [internal] load build context                                                              0.0s 
+ => => transferring context: 99B                                                               0.0s 
+ => CACHED [2/5] WORKDIR /app                                                                  0.0s 
+ => CACHED [3/5] COPY app/ /app/                                                               0.0s 
+ => ERROR [4/5] RUN apt-get update && apt-get install -y python3 python3-pip &&     rm -rf /v  0.2s 
+------
+ > [4/5] RUN apt-get update && apt-get install -y python3 python3-pip &&     rm -rf /var/lib/apt/lists/*:
+0.208 Reading package lists...
+0.220 E: List directory /var/lib/apt/lists/partial is missing. - Acquire (13: Permission denied)    
+------
+Dockerfile:9
+
+--------------------
+
+   8 |     # Install Python
+
+   9 | >>> RUN apt-get update && apt-get install -y python3 python3-pip && \
+
+  10 | >>>     rm -rf /var/lib/apt/lists/*
+
+  11 |
+
+--------------------
+
+failed to solve: process "/bin/sh -c apt-get update && apt-get install -y python3 python3-pip &&     rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/x2ktm38921krydnlqqnpz81fm      
+
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build
+time="2025-12-13T16:35:30+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 2.1s (9/10)
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 491B                                                           0.0s 
+ => [internal] load metadata for docker.io/library/spark:scala                                 1.6s 
+ => [internal] load .dockerignore                                                              0.0s
+ => => transferring context: 2B                                                                0.0s 
+ => [1/5] FROM docker.io/library/spark:scala@sha256:5a13202a9dc7645c14cbb85a812d967d63a755f4f  0.0s 
+ => => resolve docker.io/library/spark:scala@sha256:5a13202a9dc7645c14cbb85a812d967d63a755f4f  0.0s 
+ => [internal] load build context                                                              0.0s 
+ => => transferring context: 99B                                                               0.0s 
+ => CACHED [2/5] WORKDIR /app                                                                  0.0s 
+ => CACHED [3/5] COPY app/ /app/                                                               0.0s 
+ => ERROR [4/5] RUN mkdir -p /var/lib/apt/lists/partial &&     apt-get update && apt-get inst  0.2s 
+------
+ > [4/5] RUN mkdir -p /var/lib/apt/lists/partial &&     apt-get update && apt-get install -y --no-install-recommends python3 python3-pip &&     rm -rf /var/lib/apt/lists/*:
+0.158 mkdir: cannot create directory ‘/var/lib/apt/lists/partial’: Permission denied
+------
+Dockerfile:9
+
+--------------------
+
+   8 |     # Install Python
+
+   9 | >>> RUN mkdir -p /var/lib/apt/lists/partial && \
+
+  10 | >>>     apt-get update && apt-get install -y --no-install-recommends python3 python3-pip && \
+
+  11 | >>>     rm -rf /var/lib/apt/lists/*
+
+  12 |
+
+--------------------
+
+failed to solve: process "/bin/sh -c mkdir -p /var/lib/apt/lists/partial &&     apt-get update && apt-get install -y --no-install-recommends python3 python3-pip &&     rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 1
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/yryqu7fhk71jedmt8qaa4i3qu      
+
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build
+time="2025-12-13T16:36:23+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 2.0s (4/4) FINISHED
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 718B                                                           0.0s 
+ => ERROR [internal] load metadata for docker.io/library/openjdk:11-jre-slim                   1.7s 
+ => [auth] library/openjdk:pull token for registry-1.docker.io                                 0.0s
+------
+ > [internal] load metadata for docker.io/library/openjdk:11-jre-slim:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM openjdk:11-jre-slim
+
+   2 |
+
+   3 |     WORKDIR /app
+
+--------------------
+
+failed to solve: openjdk:11-jre-slim: failed to resolve source metadata for docker.io/library/openjdk:11-jre-slim: docker.io/library/openjdk:11-jre-slim: not found
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/vm57q2gfgpmlfu1ndi5pko4z9      
+
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build
+time="2025-12-13T16:39:37+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 1.1s (3/3) FINISHED
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 718B                                                           0.0s 
+ => ERROR [internal] load metadata for docker.io/library/openjdk:11-jre-slim                   0.7s 
+------
+ > [internal] load metadata for docker.io/library/openjdk:11-jre-slim:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM openjdk:11-jre-slim
+
+   2 |
+
+   3 |     WORKDIR /app
+
+--------------------
+
+failed to solve: openjdk:11-jre-slim: failed to resolve source metadata for docker.io/library/openjdk:11-jre-slim: docker.io/library/openjdk:11-jre-slim: not found
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/kddgjvo0cy71nlqombw2zqcw5      
+
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build
+time="2025-12-13T16:39:54+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 0.5s (3/3) FINISHED
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 709B                                                           0.0s 
+ => ERROR [internal] load metadata for docker.io/library/openjdk:11                            0.2s 
+------
+ > [internal] load metadata for docker.io/library/openjdk:11:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM openjdk:11
+
+   2 |
+
+   3 |     WORKDIR /app
+
+--------------------
+
+failed to solve: openjdk:11: failed to resolve source metadata for docker.io/library/openjdk:11: docker.io/library/openjdk:11: not found
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/6ja2uibos4br93wdgso5k8cqc      
+
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build
+time="2025-12-13T16:40:37+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 57.3s (13/13) FINISHED
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 727B                                                           0.0s 
+ => [internal] load metadata for docker.io/library/eclipse-temurin:11-jre-focal                3.4s 
+ => [auth] library/eclipse-temurin:pull token for registry-1.docker.io                         0.0s
+ => [internal] load .dockerignore                                                              0.0s
+ => => transferring context: 2B                                                                0.0s 
+ => [1/5] FROM docker.io/library/eclipse-temurin:11-jre-focal@sha256:6eebc1f27c1433f50d08dc7f  5.1s 
+ => => resolve docker.io/library/eclipse-temurin:11-jre-focal@sha256:6eebc1f27c1433f50d08dc7f  0.0s 
+ => => sha256:53352117d7a5046c71e9f7af5c219de7acfb4ae2aef847bc6519c338e408e5b 2.28kB / 2.28kB  0.5s 
+ => => sha256:72e029366186745d92cec2e8f7b7d20aea0b4028b9914c30a251d5d1cab31 47.22MB / 47.22MB  3.7s 
+ => => sha256:75792e74185b69d14904e3cf6aee93d670fb601a9a082c1cab49d881d45559ca 157B / 157B     1.1s
+ => => sha256:f02d9fc7fd4671de2143244d173ce3b99e9b376023664c13ab227a00907c7 20.26MB / 20.26MB  3.0s
+ => => sha256:13b7e930469f6d3575a320709035c6acf6f5485a76abcf03d1b92a64c09c2 27.51MB / 27.51MB  3.2s 
+ => => extracting sha256:13b7e930469f6d3575a320709035c6acf6f5485a76abcf03d1b92a64c09c2476      0.5s
+ => => extracting sha256:f02d9fc7fd4671de2143244d173ce3b99e9b376023664c13ab227a00907c7948      0.4s 
+ => => extracting sha256:72e029366186745d92cec2e8f7b7d20aea0b4028b9914c30a251d5d1cab31a8a      0.5s 
+ => => extracting sha256:75792e74185b69d14904e3cf6aee93d670fb601a9a082c1cab49d881d45559ca      0.0s 
+ => => extracting sha256:53352117d7a5046c71e9f7af5c219de7acfb4ae2aef847bc6519c338e408e5b5      0.0s 
+ => [internal] load build context                                                              0.0s 
+ => => transferring context: 99B                                                               0.0s 
+ => [2/5] WORKDIR /app                                                                         0.1s 
+ => [3/5] RUN apt-get update && apt-get install -y --no-install-recommends     python3 pytho  10.9s 
+ => [4/5] RUN curl -fSL https://archive.apache.org/dist/spark/spark-3.5.0/spark-3.5.0-bin-ha  27.6s 
+ => [5/5] COPY app/ /app/                                                                      0.0s 
+ => exporting to image                                                                         9.7s 
+ => => exporting layers                                                                        7.9s 
+ => => exporting manifest sha256:579f6ea82d80ee00862c1e6f14ca7b06ccbef4bc1444e9c5ec3bbd199720  0.0s 
+ => => exporting config sha256:c53defe36b988889b2ec991c741cd0d30d7e3ee5c7984049a0eeb4ce5f8775  0.0s 
+ => => exporting attestation manifest sha256:116d7fe056d31b995472c586bbb0b98b2a10a4e8c2451461  0.0s 
+ => => exporting manifest list sha256:937cf2fee4ac42f62538bba1fd54412f87d2f7d56273a2d8c5ca139  0.0s 
+ => => naming to docker.io/library/spark_docker_demo-spark:latest                              0.0s 
+ => => unpacking to docker.io/library/spark_docker_demo-spark:latest                           1.8s 
+ => resolving provenance for metadata file                                                     0.0s 
+[+] Building 1/1
+ ✔ spark_docker_demo-spark  Built                                                              0.0s 
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker run -it spark_docker_demo-spark bash
+root@a20a22bdbe9c:/app# env | grep SPARK
+SPARK_HOME=/opt/spark
+root@a20a22bdbe9c:/app# $SPARK_HOME/bin/spark-submit /app/spark_app.py
+25/12/13 12:45:23 INFO SparkContext: Running Spark version 3.5.0
+25/12/13 12:45:23 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+25/12/13 12:45:23 INFO SparkContext: Java version 11.0.27
+25/12/13 12:45:24 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/12/13 12:45:24 INFO ResourceUtils: ==============================================================
+25/12/13 12:45:24 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/12/13 12:45:24 INFO ResourceUtils: ==============================================================
+25/12/13 12:45:24 INFO SparkContext: Submitted application: SimpleCSVApp
+25/12/13 12:45:24 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/12/13 12:45:24 INFO ResourceProfile: Limiting resource is cpu
+25/12/13 12:45:24 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/12/13 12:45:24 INFO SecurityManager: Changing view acls to: root
+25/12/13 12:45:24 INFO SecurityManager: Changing modify acls to: root
+25/12/13 12:45:24 INFO SecurityManager: Changing view acls groups to:
+25/12/13 12:45:24 INFO SecurityManager: Changing modify acls groups to:
+25/12/13 12:45:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+25/12/13 12:45:24 INFO Utils: Successfully started service 'sparkDriver' on port 43447.
+25/12/13 12:45:24 INFO SparkEnv: Registering MapOutputTracker
+25/12/13 12:45:24 INFO SparkEnv: Registering BlockManagerMaster
+25/12/13 12:45:24 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/12/13 12:45:24 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/12/13 12:45:24 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/12/13 12:45:24 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-7d2428e3-3d6a-46a7-b830-686f1d936258
+25/12/13 12:45:24 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/12/13 12:45:24 INFO SparkEnv: Registering OutputCommitCoordinator
+25/12/13 12:45:24 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/12/13 12:45:24 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/12/13 12:45:24 INFO Executor: Starting executor ID driver on host a20a22bdbe9c
+25/12/13 12:45:24 INFO Executor: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+25/12/13 12:45:24 INFO Executor: Java version 11.0.27
+25/12/13 12:45:24 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/12/13 12:45:24 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1af45013 for default.
+25/12/13 12:45:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46325.
+25/12/13 12:45:24 INFO NettyBlockTransferService: Server created on a20a22bdbe9c:46325
+25/12/13 12:45:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/12/13 12:45:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, a20a22bdbe9c, 46325, None)
+25/12/13 12:45:24 INFO BlockManagerMasterEndpoint: Registering block manager a20a22bdbe9c:46325 with 434.4 MiB RAM, BlockManagerId(driver, a20a22bdbe9c, 46325, None)
+25/12/13 12:45:24 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, a20a22bdbe9c, 46325, None)
+25/12/13 12:45:24 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, a20a22bdbe9c, 46325, None)
+25/12/13 12:45:25 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/12/13 12:45:25 INFO SharedState: Warehouse path is 'file:/app/spark-warehouse'.
+Traceback (most recent call last):
+  File "/app/spark_app.py", line 20, in <module>
+    main()
+  File "/app/spark_app.py", line 7, in main
+    df = spark.read.csv("app/sample_data.csv", header=True, inferSchema=True)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 740, in csv
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco 
+pyspark.errors.exceptions.captured.AnalysisException: [PATH_NOT_FOUND] Path does not exist: file:/app/app/sample_data.csv.
+25/12/13 12:45:25 INFO SparkContext: Invoking stop() from shutdown hook
+25/12/13 12:45:25 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/12/13 12:45:25 INFO SparkUI: Stopped Spark web UI at http://a20a22bdbe9c:4040
+25/12/13 12:45:25 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/12/13 12:45:25 INFO MemoryStore: MemoryStore cleared
+25/12/13 12:45:25 INFO BlockManager: BlockManager stopped
+25/12/13 12:45:25 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/12/13 12:45:25 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/12/13 12:45:25 INFO SparkContext: Successfully stopped SparkContext
+25/12/13 12:45:25 INFO ShutdownHookManager: Shutdown hook called
+25/12/13 12:45:25 INFO ShutdownHookManager: Deleting directory /tmp/spark-aaac6f31-8196-4b69-a9df-e3f0e8e2b66b/pyspark-1319642e-a1b5-410e-8313-e10f1b974a5e
+25/12/13 12:45:25 INFO ShutdownHookManager: Deleting directory /tmp/spark-cacc59e0-6db3-4e41-a16f-21c215374e59
+25/12/13 12:45:25 INFO ShutdownHookManager: Deleting directory /tmp/spark-aaac6f31-8196-4b69-a9df-e3f0e8e2b66b
+root@a20a22bdbe9c:/app# ls
+sample_data.csv  spark_app.py
+root@a20a22bdbe9c:/app# exit
+exit
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker-compose build                   
+time="2025-12-13T16:48:03+04:00" level=warning msg="C:\\Users\\balak\\GitProjects\\labs\\docker\\spark_docker_demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Building 3.8s (13/13) FINISHED
+ => [internal] load local bake definitions                                                     0.0s 
+ => => reading from stdin 594B                                                                 0.0s
+ => [internal] load build definition from Dockerfile                                           0.0s
+ => => transferring dockerfile: 727B                                                           0.0s 
+ => [internal] load metadata for docker.io/library/eclipse-temurin:11-jre-focal                1.5s 
+ => [auth] library/eclipse-temurin:pull token for registry-1.docker.io                         0.0s 
+ => [internal] load .dockerignore                                                              0.0s
+ => => transferring context: 2B                                                                0.0s 
+ => [internal] load build context                                                              0.0s 
+ => => transferring context: 594B                                                              0.0s 
+ => [1/5] FROM docker.io/library/eclipse-temurin:11-jre-focal@sha256:6eebc1f27c1433f50d08dc7f  0.0s 
+ => => resolve docker.io/library/eclipse-temurin:11-jre-focal@sha256:6eebc1f27c1433f50d08dc7f  0.0s 
+ => CACHED [2/5] WORKDIR /app                                                                  0.0s 
+ => CACHED [3/5] RUN apt-get update && apt-get install -y --no-install-recommends     python3  0.0s 
+ => CACHED [4/5] RUN curl -fSL https://archive.apache.org/dist/spark/spark-3.5.0/spark-3.5.0-  0.0s 
+ => [5/5] COPY app/ /app/                                                                      0.0s
+ => exporting to image                                                                         1.8s 
+ => => exporting layers                                                                        0.0s 
+ => => exporting manifest sha256:64f517e1f42c27dee050c0954f3d5c83a5e7d8b2be5f6f5807deb8a908fa  0.0s 
+ => => exporting config sha256:18c3033e3fd9b81d9ae7e0e337d23253f3332a1b9251150ab50365be1b7453  0.0s 
+ => => exporting attestation manifest sha256:c3f6aaac0359acf31ccd040f9ec53ba399094876893d5590  0.0s 
+ => => exporting manifest list sha256:9421a059e463d83b262d61bd4943afdb0c07ee1deb951a32883ae46  0.0s 
+ => => naming to docker.io/library/spark_docker_demo-spark:latest                              0.0s 
+ => => unpacking to docker.io/library/spark_docker_demo-spark:latest                           1.7s 
+ => resolving provenance for metadata file                                                     0.0s 
+[+] Building 1/1
+ ✔ spark_docker_demo-spark  Built                                                              0.0s 
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> docker run -it spark_docker_demo-spark bash
+root@62b67396af11:/app# $SPARK_HOME/bin/spark-submit /app/spark_app.py
+25/12/13 12:48:48 INFO SparkContext: Running Spark version 3.5.0
+25/12/13 12:48:48 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+25/12/13 12:48:48 INFO SparkContext: Java version 11.0.27
+25/12/13 12:48:48 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/12/13 12:48:48 INFO ResourceUtils: ==============================================================
+25/12/13 12:48:48 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/12/13 12:48:48 INFO ResourceUtils: ==============================================================
+25/12/13 12:48:48 INFO SparkContext: Submitted application: SimpleCSVApp
+25/12/13 12:48:48 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/12/13 12:48:48 INFO ResourceProfile: Limiting resource is cpu
+25/12/13 12:48:48 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/12/13 12:48:48 INFO SecurityManager: Changing view acls to: root
+25/12/13 12:48:48 INFO SecurityManager: Changing modify acls to: root
+25/12/13 12:48:48 INFO SecurityManager: Changing view acls groups to:
+25/12/13 12:48:48 INFO SecurityManager: Changing modify acls groups to:
+25/12/13 12:48:48 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+25/12/13 12:48:48 INFO Utils: Successfully started service 'sparkDriver' on port 35269.
+25/12/13 12:48:48 INFO SparkEnv: Registering MapOutputTracker
+25/12/13 12:48:48 INFO SparkEnv: Registering BlockManagerMaster
+25/12/13 12:48:48 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/12/13 12:48:48 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/12/13 12:48:48 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/12/13 12:48:48 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-904b68d6-756b-4b41-8e0b-6f8939febf4c
+25/12/13 12:48:48 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/12/13 12:48:48 INFO SparkEnv: Registering OutputCommitCoordinator
+25/12/13 12:48:48 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/12/13 12:48:48 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/12/13 12:48:48 INFO Executor: Starting executor ID driver on host 62b67396af11
+25/12/13 12:48:48 INFO Executor: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+25/12/13 12:48:48 INFO Executor: Java version 11.0.27
+25/12/13 12:48:48 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/12/13 12:48:48 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@5a95ecf2 for default.
+25/12/13 12:48:48 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44691.
+25/12/13 12:48:48 INFO NettyBlockTransferService: Server created on 62b67396af11:44691
+25/12/13 12:48:48 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/12/13 12:48:48 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 62b67396af11, 44691, None)
+25/12/13 12:48:48 INFO BlockManagerMasterEndpoint: Registering block manager 62b67396af11:44691 with 434.4 MiB RAM, BlockManagerId(driver, 62b67396af11, 44691, None)
+25/12/13 12:48:48 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 62b67396af11, 44691, None)
+25/12/13 12:48:48 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 62b67396af11, 44691, None)
+25/12/13 12:48:48 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/12/13 12:48:48 INFO SharedState: Warehouse path is 'file:/app/spark-warehouse'.
+25/12/13 12:48:49 INFO InMemoryFileIndex: It took 31 ms to list leaf files for 1 paths.
+25/12/13 12:48:49 INFO InMemoryFileIndex: It took 1 ms to list leaf files for 1 paths.
+25/12/13 12:48:50 INFO FileSourceStrategy: Pushed Filters: 
+25/12/13 12:48:50 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 105.210459 ms
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 199.4 KiB, free 434.2 MiB)
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 434.2 MiB)
+25/12/13 12:48:51 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 62b67396af11:44691 (size: 34.2 KiB, free: 434.4 MiB)
+25/12/13 12:48:51 INFO SparkContext: Created broadcast 0 from csv at <unknown>:0
+25/12/13 12:48:51 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/12/13 12:48:51 INFO SparkContext: Starting job: csv at <unknown>:0
+25/12/13 12:48:51 INFO DAGScheduler: Got job 0 (csv at <unknown>:0) with 1 output partitions
+25/12/13 12:48:51 INFO DAGScheduler: Final stage: ResultStage 0 (csv at <unknown>:0)
+25/12/13 12:48:51 INFO DAGScheduler: Parents of final stage: List()
+25/12/13 12:48:51 INFO DAGScheduler: Missing parents: List()
+25/12/13 12:48:51 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at <unknown>:0), which has no missing parents
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 13.5 KiB, free 434.2 MiB)
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.4 KiB, free 434.2 MiB)
+25/12/13 12:48:51 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 62b67396af11:44691 (size: 6.4 KiB, free: 434.4 MiB)
+25/12/13 12:48:51 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1580  
+25/12/13 12:48:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0       
+25/12/13 12:48:51 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (62b67396af11, executor driver, partition 0, PROCESS_LOCAL, 8205 bytes)
+25/12/13 12:48:51 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 12.024779 ms
+25/12/13 12:48:51 INFO FileScanRDD: Reading File path: file:///app/sample_data.csv, range: 0-47, partition values: [empty row]
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 6.379772 ms
+25/12/13 12:48:51 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1628 bytes result sent to driver
+25/12/13 12:48:51 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 159 ms on 62b67396af11 (executor driver) (1/1)
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+25/12/13 12:48:51 INFO DAGScheduler: ResultStage 0 (csv at <unknown>:0) finished in 0.247 s
+25/12/13 12:48:51 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished      
+25/12/13 12:48:51 INFO DAGScheduler: Job 0 finished: csv at <unknown>:0, took 0.278814 s
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 5.244624 ms
+25/12/13 12:48:51 INFO FileSourceStrategy: Pushed Filters: 
+25/12/13 12:48:51 INFO FileSourceStrategy: Post-Scan Filters:
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 199.4 KiB, free 434.0 MiB)
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 433.9 MiB)
+25/12/13 12:48:51 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 62b67396af11:44691 (size: 34.2 KiB, free: 434.3 MiB)
+25/12/13 12:48:51 INFO SparkContext: Created broadcast 2 from csv at <unknown>:0
+25/12/13 12:48:51 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/12/13 12:48:51 INFO SparkContext: Starting job: csv at <unknown>:0
+25/12/13 12:48:51 INFO DAGScheduler: Got job 1 (csv at <unknown>:0) with 1 output partitions
+25/12/13 12:48:51 INFO DAGScheduler: Final stage: ResultStage 1 (csv at <unknown>:0)
+25/12/13 12:48:51 INFO DAGScheduler: Parents of final stage: List()
+25/12/13 12:48:51 INFO DAGScheduler: Missing parents: List()
+25/12/13 12:48:51 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[9] at csv at <unknown>:0), which has no missing parents
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 27.3 KiB, free 433.9 MiB)
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 12.6 KiB, free 433.9 MiB)
+25/12/13 12:48:51 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 62b67396af11:44691 (size: 12.6 KiB, free: 434.3 MiB)
+25/12/13 12:48:51 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1580  
+25/12/13 12:48:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[9] at csv at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0       
+25/12/13 12:48:51 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (62b67396af11, executor driver, partition 0, PROCESS_LOCAL, 8205 bytes)
+25/12/13 12:48:51 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 7.353495 ms
+25/12/13 12:48:51 INFO FileScanRDD: Reading File path: file:///app/sample_data.csv, range: 0-47, partition values: [empty row]
+25/12/13 12:48:51 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1616 bytes result sent to driver
+25/12/13 12:48:51 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 60 ms on 62b67396af11 (executor driver) (1/1)
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+25/12/13 12:48:51 INFO DAGScheduler: ResultStage 1 (csv at <unknown>:0) finished in 0.092 s
+25/12/13 12:48:51 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished      
+25/12/13 12:48:51 INFO DAGScheduler: Job 1 finished: csv at <unknown>:0, took 0.097926 s
+=== Raw Data ===
+25/12/13 12:48:51 INFO FileSourceStrategy: Pushed Filters: 
+25/12/13 12:48:51 INFO FileSourceStrategy: Post-Scan Filters:
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 8.994173 ms
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 199.4 KiB, free 433.7 MiB)
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 433.7 MiB)
+25/12/13 12:48:51 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 62b67396af11:44691 (size: 34.2 KiB, free: 434.3 MiB)
+25/12/13 12:48:51 INFO SparkContext: Created broadcast 4 from showString at <unknown>:0
+25/12/13 12:48:51 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/12/13 12:48:51 INFO SparkContext: Starting job: showString at <unknown>:0
+25/12/13 12:48:51 INFO DAGScheduler: Got job 2 (showString at <unknown>:0) with 1 output partitions 
+25/12/13 12:48:51 INFO DAGScheduler: Final stage: ResultStage 2 (showString at <unknown>:0)
+25/12/13 12:48:51 INFO DAGScheduler: Parents of final stage: List()
+25/12/13 12:48:51 INFO DAGScheduler: Missing parents: List()
+25/12/13 12:48:51 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[13] at showString at <unknown>:0), which has no missing parents
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 15.8 KiB, free 433.6 MiB)
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 7.6 KiB, free 433.6 MiB)
+25/12/13 12:48:51 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 62b67396af11:44691 (size: 7.6 KiB, free: 434.3 MiB)
+25/12/13 12:48:51 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1580  
+25/12/13 12:48:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[13] at showString at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0       
+25/12/13 12:48:51 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (62b67396af11, executor driver, partition 0, PROCESS_LOCAL, 8205 bytes)
+25/12/13 12:48:51 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 12.643671 ms
+25/12/13 12:48:51 INFO FileScanRDD: Reading File path: file:///app/sample_data.csv, range: 0-47, partition values: [empty row]
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 5.153953 ms
+25/12/13 12:48:51 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 1639 bytes result sent to driver
+25/12/13 12:48:51 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 70 ms on 62b67396af11 (executor driver) (1/1)
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool
+25/12/13 12:48:51 INFO DAGScheduler: ResultStage 2 (showString at <unknown>:0) finished in 0.084 s  
+25/12/13 12:48:51 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished      
+25/12/13 12:48:51 INFO DAGScheduler: Job 2 finished: showString at <unknown>:0, took 0.089511 s     
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 10.246547 ms
++---+------+---+
+| id|  name|age|
++---+------+---+
+|  1|  bala| 32|
+|  2|  kiki| 28|
+|  3|manasa|  3|
++---+------+---+
+
+=== Filtered Data (age > 30) ===
+25/12/13 12:48:51 INFO FileSourceStrategy: Pushed Filters: IsNotNull(age),GreaterThan(age,30)
+25/12/13 12:48:51 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(age#19),(age#19 > 30)       
+25/12/13 12:48:51 INFO CodeGenerator: Code generated in 9.34774 ms
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 199.4 KiB, free 433.4 MiB)
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 433.4 MiB)
+25/12/13 12:48:51 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 62b67396af11:44691 (size: 34.2 KiB, free: 434.2 MiB)
+25/12/13 12:48:51 INFO SparkContext: Created broadcast 6 from showString at <unknown>:0
+25/12/13 12:48:51 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/12/13 12:48:51 INFO SparkContext: Starting job: showString at <unknown>:0
+25/12/13 12:48:51 INFO DAGScheduler: Got job 3 (showString at <unknown>:0) with 1 output partitions 
+25/12/13 12:48:51 INFO DAGScheduler: Final stage: ResultStage 3 (showString at <unknown>:0)
+25/12/13 12:48:51 INFO DAGScheduler: Parents of final stage: List()
+25/12/13 12:48:51 INFO DAGScheduler: Missing parents: List()
+25/12/13 12:48:51 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[17] at showString at <unknown>:0), which has no missing parents
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 16.4 KiB, free 433.4 MiB)
+25/12/13 12:48:51 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 7.9 KiB, free 433.4 MiB)
+25/12/13 12:48:51 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 62b67396af11:44691 (size: 7.9 KiB, free: 434.2 MiB)
+25/12/13 12:48:51 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1580  
+25/12/13 12:48:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[17] at showString at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+25/12/13 12:48:51 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0       
+25/12/13 12:48:51 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (62b67396af11, executor driver, partition 0, PROCESS_LOCAL, 8205 bytes)
+25/12/13 12:48:51 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+25/12/13 12:48:52 INFO CodeGenerator: Code generated in 12.86706 ms
+25/12/13 12:48:52 INFO FileScanRDD: Reading File path: file:///app/sample_data.csv, range: 0-47, partition values: [empty row]
+25/12/13 12:48:52 INFO CodeGenerator: Code generated in 6.285522 ms
+25/12/13 12:48:52 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 1647 bytes result sent to driver
+25/12/13 12:48:52 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 76 ms on 62b67396af11 (executor driver) (1/1)
+25/12/13 12:48:52 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool
+25/12/13 12:48:52 INFO DAGScheduler: ResultStage 3 (showString at <unknown>:0) finished in 0.092 s  
+25/12/13 12:48:52 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+25/12/13 12:48:52 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished      
+25/12/13 12:48:52 INFO DAGScheduler: Job 3 finished: showString at <unknown>:0, took 0.094911 s     
++---+----+---+
+| id|name|age|
++---+----+---+
+|  1|bala| 32|
++---+----+---+
+
+25/12/13 12:48:52 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/12/13 12:48:52 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 62b67396af11:44691 in memory (size: 12.6 KiB, free: 434.2 MiB)
+25/12/13 12:48:52 INFO SparkUI: Stopped Spark web UI at http://62b67396af11:4040
+25/12/13 12:48:52 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/12/13 12:48:52 INFO MemoryStore: MemoryStore cleared
+25/12/13 12:48:52 INFO BlockManager: BlockManager stopped
+25/12/13 12:48:52 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/12/13 12:48:52 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/12/13 12:48:52 INFO SparkContext: Successfully stopped SparkContext
+25/12/13 12:48:52 INFO ShutdownHookManager: Shutdown hook called
+25/12/13 12:48:52 INFO ShutdownHookManager: Deleting directory /tmp/spark-3dd12e3b-38cb-4a51-b1e9-d3c55955a5a7
+25/12/13 12:48:52 INFO ShutdownHookManager: Deleting directory /tmp/spark-05358c8b-8d97-4e17-8c10-974df577d3d2/pyspark-6d438b2a-997e-4c91-933e-ba93aea9797b
+25/12/13 12:48:52 INFO ShutdownHookManager: Deleting directory /tmp/spark-05358c8b-8d97-4e17-8c10-974df577d3d2
+root@62b67396af11:/app# 
+PS C:\Users\balak\GitProjects\labs\docker\spark_docker_demo> 
