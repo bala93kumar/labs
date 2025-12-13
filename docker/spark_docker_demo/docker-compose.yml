@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  spark:
+    build: .
+    container_name: spark-demo
+    volumes:
+      - ./app:/app
+    command: spark-submit /app/spark_app.py
