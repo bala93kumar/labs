@@ -152,3 +152,7 @@ root@dockerserver:~# docker container exec -t -i  nginx-demo ip a
     inet 172.17.0.2/16 brd 172.17.255.255 scope global eth0
        valid_lft forever preferred_lft forever
 
+
+# run a mysql container with environment variables for root password
+
+
