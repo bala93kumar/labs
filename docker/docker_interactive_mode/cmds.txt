@@ -1,0 +1,18 @@
+
+PS C:\Users\balak\GitProjects\labs\docker\docker_interactive_mode> docker build .
+[+] Building 13.7s (9/9) FINISHED                                       docker:desktop-linux 
+ => [internal] load build definition from Dockerfile                                    0.0s 
+ => => transferring dockerfile: 198B                                                    0.0s 
+ => [internal] load metadata for docker.io/library/python:3.10.19-slim-trixie           4.3s 
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/srpya6b4yunntcoufkec49jsc 
+PS C:\Users\balak\GitProjects\labs\docker\docker_interactive_mode> docker run sha256:02b1519d0a2c27d4bc8f2973ab91cfbba526d573cb4659f777343ebc2e998df1
+Enter the minimum number: Traceback (most recent call last):
+  File "/app/rnd.py", line 3, in <module>
+    min_number = int(input("Enter the minimum number: "))
+EOFError: EOF when reading a line
+PS C:\Users\balak\GitProjects\labs\docker\docker_interactive_mode> docker run -i -t sha256:02b1519d0a2c27d4bc8f2973ab91cfbba526d573cb4659f777343ebc2e998df1
+Enter the minimum number: 1
+Enter the maximum number: 2
+Random number between 1 and 2 is: 2
+PS C:\Users\balak\GitProjects\labs\docker\docker_interactive_mode>

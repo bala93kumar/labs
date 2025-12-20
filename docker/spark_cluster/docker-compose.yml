@@ -1,0 +1,116 @@
+version: '3.8'
+
+services:
+  # Spark Master
+  spark-master:
+    build: .
+    container_name: spark-master
+    hostname: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+    ports:
+      - "8080:8080"    # Master Web UI
+      - "7077:7077"    # Master RPC
+      - "6066:6066"    # REST API
+      - "4040:4040"    # Application UI
+    volumes:
+      - ./app:/app
+    networks:
+      - spark-network
+    command: >
+      bash -c "
+        service ssh start &&
+        $SPARK_HOME/sbin/start-master.sh &&
+        tail -f /dev/null
+      "
+
+  # Spark Worker 1
+  spark-worker-1:
+    build: .
+    container_name: spark-worker-1
+    hostname: spark-worker-1
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=2
+    ports:
+      - "8081:8081"    # Worker Web UI
+      - "7078:7078"    # Worker RPC
+    volumes:
+      - ./app:/app
+    depends_on:
+      - spark-master
+    networks:
+      - spark-network
+    command: >
+      bash -c "
+        service ssh start &&
+        $SPARK_HOME/sbin/start-worker.sh spark://spark-master:7077 &&
+        tail -f /dev/null
+      "
+
+  # Spark Worker 2
+  spark-worker-2:
+    build: .
+    container_name: spark-worker-2
+    hostname: spark-worker-2
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=2
+    ports:
+      - "8082:8081"    # Worker Web UI (mapped to 8082 on host)
+      - "7079:7078"    # Worker RPC (mapped to 7079 on host)
+    volumes:
+      - ./app:/app
+    depends_on:
+      - spark-master
+    networks:
+      - spark-network
+    command: >
+      bash -c "
+        service ssh start &&
+        $SPARK_HOME/sbin/start-worker.sh spark://spark-master:7077 &&
+        tail -f /dev/null
+      "
+
+  # Spark Worker 3
+  spark-worker-3:
+    build: .
+    container_name: spark-worker-3
+    hostname: spark-worker-3
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=2
+    ports:
+      - "8083:8081"    # Worker Web UI (mapped to 8083 on host)
+      - "7080:7078"    # Worker RPC (mapped to 7080 on host)
+    volumes:
+      - ./app:/app
+    depends_on:
+      - spark-master
+    networks:
+      - spark-network
+    command: >
+      bash -c "
+        service ssh start &&
+        $SPARK_HOME/sbin/start-worker.sh spark://spark-master:7077 &&
+        tail -f /dev/null
+      "
+
+networks:
+  spark-network:
+    driver: bridge
+
+volumes:
+  spark-master-data:
+  spark-worker-1-data:
+  spark-worker-2-data:
+  spark-worker-3-data:

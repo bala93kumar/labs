@@ -156,3 +156,65 @@ root@dockerserver:~# docker container exec -t -i  nginx-demo ip a
 # run a mysql container with environment variables for root password
 
 
+#tokeep docker container running without running your applications and to copy fiels into a container 
+
+ Id CommandLine
+  -- -----------
+   1 try { . "c:\Users\balak\AppData\Local\Programs\Microsoft VS Code\resources\a... 
+   2 docker run -it spark_docker_demo-spark
+   3 docker run -it -a spark_docker_demo-spark
+   4 ls
+   5 cd .\docker\
+   6 ls
+   7 cd .\spark_docker_demo\
+   8 ls
+   9 docker start spark_docker_demo-spark
+  10 docker ps -a
+  11 docker start d34de3535ab4
+  12 docker exec -it d34de3535ab4 /bin/bash
+  13 docker exec -it competent_albattani /bin/bash
+  14 docker exec -it competent_albattani /bin/sh
+  15 docker exec -it competent_albattani /
+  16 docker ps -a
+  17 docker start d34de3535ab4
+  18 docker ps -a
+  19 docker ps -a
+  20 docker ps -a
+  21 docker exec -it competent_albattani /bin/sh
+  22 docker ps -a
+  23 docker logs d34de3535ab4
+  24 docker logs d34de3535ab4
+  25 docker run -d --name spark_keepalive spark_docker_demo-spark tail -f /dev/null  
+  26 docker ps -a
+  27 docker run -d --name spark_keepalive spark_docker_demo-spark tail -f /dev/null  
+  28 docker ps -a
+  29 ls
+  30 ls
+  31 cd .\app\
+  32 ls
+  33 docker cp sample.txt spark_keepalive:/test
+  34 docker exec -it spark_keepalive /bin/sh
+  35 docker exec spark_keepalive mkdir -p /test
+  36 docker exec spark_keepalive rm /test
+  37 docker exec spark_keepalive mkdir -p /test
+  38 docker exec -it  spark_keepalive ls -l /test
+  39 docker exec -it  spark_keepalive /bin/sh
+  40 docker cp sample.txt spark_keepalive:/test
+  41 docker exec -it  spark_keepalive /bin/sh
+
+
+  ###########TO BUILD DOCKER IMAGE FROM DOCKERFILE WITH A NAME AND TAG ###########
+
+docker build -t goals:latest .
+
+##################
+
+#to build docker image with a name and tag 
+docker build -t node-app:latest .
+
+#to run the docker image with port mapping 
+ docker run -d --name node-app-container -p 3000:300 node-app
+
+ #DOCER RUN IN INTERATIC MOVE 
+
+ docker run --rm  -it --name bmi_app_container bmi_app
