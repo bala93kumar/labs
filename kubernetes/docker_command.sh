@@ -218,3 +218,12 @@ docker build -t node-app:latest .
  #DOCER RUN IN INTERATIC MOVE 
 
  docker run --rm  -it --name bmi_app_container bmi_app
+
+ #pushing docker images to docker hub
+
+ #create a repository in docker hub use the same name and run the 
+ #below command 
+ docker tag (you local image name) then yourdockerhubid/imagename:tag
+docker tag bmi_app:latest  bala93kumar/bmi_app
+
+docker push yourdockerhubid/imagename:tag
