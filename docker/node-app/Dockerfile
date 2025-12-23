@@ -6,7 +6,9 @@ COPY . /app
 
 RUN npm install
 
-EXPOSE 3000
+ENV PORT=80
+
+EXPOSE  $PORT
 
 CMD ["node", "server.js"]
 
