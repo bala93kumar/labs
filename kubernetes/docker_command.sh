@@ -227,3 +227,29 @@ docker build -t node-app:latest .
 docker tag bmi_app:latest  bala93kumar/bmi_app
 
 docker push yourdockerhubid/imagename:tag
+
+#############HOW TO MAPP LOCAL DIRECTOR TO DOCKER CONTAINER DIRECTORY ###########
+
+ 10 docker build -t feedback-node-volume:v1 .
+  11 doccker run -d -p 3000:80  --rm --name  feeback-container -v local:/app/feedback feedback-node-volume:v1
+  12 docker run -d -p 3000:80  --rm --name  feeback-container -v local:/app/feedback feedback-node-volume:v1
+  13 docker stop feeback-container
+  14 docker volume ls
+  15 docker run -d -p 3000:80  --rm --name  feeback-container -v local:/app/feedback feedback-node-volume:v1
+  16 docker stop feeback-container
+###############
+
+##TO RUN A DOCKER CONTAINER BY PASSING ENVIRONMENT VARIABLES USING -e FLAG ##########
+
+ 17 docker run -d -p 3000:80  --rm --name  feeback-container -v local:/app/feedback -e PORT=80 feedback-node-volume:v1
+ 18 docker ps -a
+ 19 docker logs feeback-container
+ #######################
+
+ #Advanced 
+
+ #Making docker container to speak with external end points.
+
+ 
+ ##DOCKER COMMAND TO CHECK WHAT IS USING WHICH PORT 
+ docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Ports}}"
