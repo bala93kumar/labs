@@ -1,0 +1,11 @@
+
+# MongoDB data directory and files
+.mongodb/
+journal/
+diagnostic.data/
+WiredTiger*
+*.wt
+mongod.lock
+storage.bson
+sizeStorer.wt
+_tmp/
