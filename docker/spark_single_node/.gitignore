@@ -1,0 +1,4 @@
+# Output directory
+output/
+# CSV files
+*.csv
