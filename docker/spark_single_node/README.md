@@ -9,8 +9,6 @@ docker logs spark-history
 
 ✅ Submit a job with event logging enabled
 
-
-
 docker exec -it spark-local bash
 
 spark-submit \

@@ -24,5 +24,5 @@ def generate_csv(out_path: str, rows: int = 200_000, categories=None):
 
 if __name__ == "__main__":
     # Change rows to a bigger number if you want heavier IO tests (e.g., 2_000_000)
-    generate_csv(out_path="data/sample_data.csv", rows=200_000)
+    generate_csv(out_path="data/sample_data.csv", rows=2_000_000)
     print("Generated: data/sample_data.csv")

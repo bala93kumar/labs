@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: 'mongo:8.2'
+    container_name: mongodb-cnt
+    volumes:
+      - mongo_data:/data/db
+    env_file:
+      - ./env/mongo.env
+    
+# IMPORTANT: bind to all interfaces so other containers can connect
+    command: ["--auth", "--bind_ip_all"]
+
+    # networks:
+    #   - goals-net 
+
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--username=mongoadmin", "--password=secret", "--authenticationDatabase=admin", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+       
+
+  backend:
+    container_name: backend-cnt
+    build: ./backend/
+    ports : 
+      - "8080:80"
+    volumes:
+      - ./logs:/app/logs  
+    env_file: 
+      - ./env/mongo.env 
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+  # frontend:
+
+
+volumes:
+  mongo_data:
+    driver: local
+
+

@@ -47,6 +47,7 @@ mount | grep /opt
 
 mount | grep /opt
 
+this is not working to skip to next command 
 
 time spark-submit \
   --master spark://spark-master:7077 \
